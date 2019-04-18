@@ -1,0 +1,95 @@
+@import url(http://fonts.googleapis.com/earlyaccess/droidarabickufi.css);
+html{
+ direction: rtl;
+ font-family: 'Droid Arabic Kufi', sans-serif;
+}
+body{
+    background: #009689;
+    color: #fff;
+}
+.wrapper{
+    max-width: 100%;
+    height: 500px;
+}
+.loading{
+    display: table;
+     margin: 50px auto;
+}
+[class^='dot']{ opacity: 0; }
+.dot1{ animation: dot1 5s infinite; }
+.dot2{ animation: dot2 5s infinite; }
+.dot3{ animation: dot3 5s infinite; }
+
+.circle1{
+    height: 200px;
+    width: 200px;
+    border: 7px dotted #fff;
+    border-radius: 50%;
+    transition: all 1s;
+    margin: 0 auto;
+    margin-top: 150px;
+    position: relative;
+    animation: rotate360 5s infinite;
+}
+
+.circle2{
+    margin:  20px auto;
+    height: 150px;
+    width: 150px;
+    border: 5px dotted #fff;
+    border-radius: 50%;
+    transition: all 1s;
+    animation: rotateX 5s infinite;
+}
+
+.circle3{
+    height: 90px;
+    width: 90px;
+    background: #fff;
+    border-radius: 50%;
+    transition: all 1s;
+    position: absolute;
+    top: 55px;
+    left: 55px;
+    animation: lighting 5s infinite;
+}
+
+@keyframes dot1{
+    0%{ opacity: 0; }
+    20%{ opacity: 0; }
+    30%{ opacity: 1; }
+    100%{ opacity: 1; }
+}
+@keyframes dot2{
+    0{ opacity: 0; }
+    40%{ opacity: 0; }
+    60%{ opacity: 1; }
+    100%{ opacity: 1; }
+}
+@keyframes dot3{
+    0%{ opacity: 0; }
+    60%{ opacity: 0; }
+    90%{ opacity: 1; }
+    100%{ opacity: 1; }
+}
+
+@keyframes rotate360{
+    0{ transform: rotate(0) }
+    100% { transform: rotate(360deg) }
+}
+@keyframes rotateX{
+    0{ transform: rotateX(0) }
+    60% { transform: rotateX(45deg)}
+    100% { transform: rotateX(0)}
+}
+@keyframes lighting{
+    0{ opacity: 1 }
+    20% { opacity: 1}
+    30% { opacity: .25}
+    40% { opacity: 1}
+    50% { opacity: .25}
+    60% { opacity: 1}
+    70% { opacity: .25}
+    80% { opacity: 1}
+    1000% { opacity: 1}
+}
